@@ -19,7 +19,7 @@ app.use(
 // Use cors() middleware with the appropriate origin setting to allow requests from your frontend
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://weather-bot-fv-1.vercel.app",
   })
 );
 //Importing routes
