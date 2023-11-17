@@ -10,8 +10,9 @@ const bot = new TelegramBot(token, { polling: true });
 const app = require("./app");
 
 connectDatabase();
-// Assuming you have a list of subscribed users
-const subscribedUsers = [];
+app.listen(process.env.PORT, () => {
+  console.log(`server is running on port ${process.env.PORT}`);
+});
 // seedToken();
 
 // Function to subscribe a user
@@ -171,7 +172,5 @@ const dailyWeatherUpdateJob = schedule.scheduleJob("0 7 * * *", async () => {
 });
 
 
-app.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}`);
-});
+
 
