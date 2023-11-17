@@ -10,6 +10,9 @@ const bot = new TelegramBot(token, { polling: true });
 const app = require("./app");
 
 connectDatabase();
+app.get("/", (req, res) => {
+  res.send("server is running fine");
+});
 app.listen(process.env.PORT, () => {
   console.log(`server is running on port ${process.env.PORT}`);
 });
